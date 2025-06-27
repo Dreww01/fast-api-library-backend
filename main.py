@@ -63,7 +63,7 @@ async def get_book(book_title: str):
             "author": book.get('author'),
             "category": book.get('category')
         }
-    return {"error": "Book not found"}
+    return {"error": "Book not found!"}
 
 # To update an entry in the books list -- PUT
 @app.put('/books/update_book')
@@ -79,4 +79,4 @@ async def delete_book(book_title: str):
         if books[i].get('title').casefold() == book_title.casefold():
             books.pop(i)
             break
-        return {"message": "Book deleted successfully"}
+        return {"message": "Book deleted successfully!"}
